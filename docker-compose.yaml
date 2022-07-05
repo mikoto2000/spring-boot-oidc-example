@@ -8,7 +8,7 @@ volumes:
 
 services:
   java:
-    image: openjdk:17
+    image: openjdk:11
     environment:
       MAVEN_OPTS: >-
         -XX:MaxRAMPercentage=50
@@ -44,7 +44,7 @@ services:
       - m2_cache:/root/.m2
       - ./project:/project
     ports:
-      - 0.0.0.0:8080:8080
+      - 0.0.0.0:8081:8081
     working_dir: /project
     entrypoint: ["sleep", "infinity"]
   postgres:
@@ -65,9 +65,9 @@ services:
       DB_SCHEMA: public
       DB_PASSWORD: password
       KEYCLOAK_USER: admin
-      KEYCLOAK_PASSWORD: password
+      KEYCLOAK_PASSWORD: Pa55w0rd
     ports:
-      - 18080:8080
+      - 0.0.0.0:8080:8080
     depends_on:
       - postgres
 
