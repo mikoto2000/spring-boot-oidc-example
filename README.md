@@ -8,7 +8,7 @@ curl -s -O https://start.spring.io/starter.zip \
          -d language=java \
          -d platformVersion=2.7.1 \
          -d packaging=jar \
-         -d jvmVersion=11 \
+         -d jvmVersion=17 \
          -d groupId=dev.mikoto2000.study.springboot.keycloak \
          -d artifactId=gettingstarted \
          -d name=gettingstarted \

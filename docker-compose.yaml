@@ -8,7 +8,7 @@ volumes:
 
 services:
   java:
-    image: openjdk:11
+    image: openjdk:17
     environment:
       MAVEN_OPTS: >-
         -XX:MaxRAMPercentage=50
@@ -56,7 +56,7 @@ services:
       POSTGRES_USER: keycloak
       POSTGRES_PASSWORD: password
   keycloak:
-    image: quay.io/keycloak/keycloak:legacy
+    image: quay.io/keycloak/keycloak:18.0.2-legacy
     environment:
       DB_VENDOR: POSTGRES
       DB_ADDR: postgres
