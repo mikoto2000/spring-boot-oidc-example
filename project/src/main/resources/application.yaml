@@ -4,7 +4,7 @@ server:
 
 keycloak:
   # Keycloak URL
-  auth-server-url: "http://keycloak:8080/auth"
+  auth-server-url: "http://keycloak:8080/"
 
   # レルム名を設定
   realm: "SampleApplication"
